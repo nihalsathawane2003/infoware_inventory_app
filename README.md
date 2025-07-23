@@ -1,93 +1,40 @@
-# Infoware Inventory App
+# Infoware Inventory Management App
 
-A desktop inventory and sales application built using **PySide6** and **MySQL**.
+This is a desktop application built using Python and PySide6 for managing product inventory, sales, purchases, and user roles. It includes login functionality for Admin and Operator.
 
----
+## Features
 
-## 📦 Features
+- Login system with user authentication
+- Admin and Operator dashboards
+- Add, view, and manage products
+- Goods receiving with quantity, rate, GST, and total calculation
+- Sales entry and inventory update
+- View current inventory
+- User role management (admin/operator)
 
-- Admin & Operator login with secure bcrypt hashed passwords
-- Product Master (barcode, GST, unit, image, etc.)
-- Goods Receiving (adds to Inventory)
-- Sales (deducts from Inventory)
-- Inventory validations (min stock, max sales)
+## Technologies Used
 
----
+- Python
+- PySide6 (Qt for Python)
+- MySQL (for storing data)
+- hashlib (for password hashing)
 
-## 🛠️ Tech Stack
+## Folder Structure
 
-- Python 3.10+
-- PySide6 (for GUI)
-- MySQL
-- bcrypt (password hashing)
+- `ui/` - contains all UI-related Python files
+- `db/` - database connection and query handling
+- `utils/` - authentication and password hashing functions
+- `main.py` - entry point of the application
 
----
+## How to Run
 
-## 🚀 Getting Started
+1. Clone the repository  
+2. Set up MySQL database using the provided SQL script  
+3. Install required packages:  
+   `pip install PySide6 mysql-connector-python`  
+4. Run the application:  
+   `python main.py`
 
-### 1. Setup MySQL
+## Author
 
-```sql
-CREATE DATABASE inventory_db;
-```
-
-### 2. Clone the Repo
-
-```bash
-git clone https://github.com/yourusername/infoware_inventory_app.git
-cd infoware_inventory_app
-```
-
-### 3. Install Requirements
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Configure DB
-
-Update `db/db_config.py` with your local MySQL credentials.
-
-### 5. Run the App
-
-```bash
-python main.py
-```
-
-### 6. Seed Sample Users
-
-```bash
-python seed_users.py
-```
-
-### ✔️ Sample Credentials
-
-```
-Username: operator1
-Password: op1pass
-
-Username: operator2
-Password: op2pass
-```
-
----
-
-## 🔒 Security
-
-- All passwords are hashed using `bcrypt`
-- No plain-text password storage
-
----
-
-## 🛠️ Build as EXE (Optional)
-
-```bash
-pip install pyinstaller
-pyinstaller --noconfirm --windowed main.py
-```
-
----
-
-## 📹 Demo Video
-
-Please check the accompanying demo video shared via drive/link.
+Nihal Sathawane
